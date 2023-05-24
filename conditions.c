@@ -6,7 +6,7 @@ int main() {
     printf("Enter the marks: ");
     scanf("%d", &marks);
 
-    if((marks > 90) && (marks <= 100)) {
+    if(!((marks <= 90) || (marks > 100))) {
         char name[100];
         printf("The grade is Ex\n");
         printf("What's your name bro: ");
@@ -24,4 +24,8 @@ int main() {
     else if((marks >=0) && (marks <= 50))
         printf("The grade is F\n");
     else printf("Marks entered are not valid\n");
+
+    // you asked it to print the truth values here
+    printf("%d\n", (marks > 90));
+    printf("%d\n", !(marks > 90));
 }
